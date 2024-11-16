@@ -1,0 +1,10 @@
+<article class="single-photo">
+    @if (photoInfo()) {
+        <div class="photo">
+            <img src="{{photoInfo()?.download_url}}" width="100%">
+        </div>
+        <div class="actions">
+            <button mat-stroked-button (click)="removeFromFavorites(photoInfo()?.id)">Remove from favorites</button>
+        </div>
+    }
+</article>

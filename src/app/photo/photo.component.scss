@@ -1,0 +1,15 @@
+.single-photo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .photo {
+        flex: 1 1 auto;
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}

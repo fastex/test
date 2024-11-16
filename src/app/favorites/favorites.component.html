@@ -1,0 +1,11 @@
+<div class="photo-grid">
+    @for(id of photos(); track id) {
+        @defer (on viewport) {
+            <app-photo-card [id]="id" routerLink="/photos/{{id}}"/>
+        } @placeholder {
+            <div>
+                <mat-spinner/>
+            </div>
+        }
+    }
+</div>

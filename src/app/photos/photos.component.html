@@ -1,0 +1,11 @@
+<div class="photo-grid">
+    @for(id of photos(); track id) {
+        @defer (on viewport) {
+            <app-photo-card [id]="id" (loaded)="loaded($event)" (click)="addToFavirites(id)"/>
+        } @placeholder {
+            <div>
+                <mat-spinner/>
+            </div>
+        }
+    }
+</div>
